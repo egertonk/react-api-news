@@ -18,7 +18,7 @@ function API() {
         .then(resp => {
           setData(resp)
         })
-    }, []) 
+    }) 
 
     for (const property in Data) {
       const temp = Data[property];
@@ -29,7 +29,7 @@ function API() {
           allData.push(
             <>
               <div className='media'> 
-              <img className="align-self-start mr-3" src={temp[propertyTwo].urlToImage} />
+              <img className="align-self-start mr-3" src={temp[propertyTwo].urlToImage} alt="News Photo"/>
               <div className="media-body"> 
                 <h3 className="mt-0">{temp[propertyTwo].title}</h3>
                 <p>{temp[propertyTwo].description}</p>
